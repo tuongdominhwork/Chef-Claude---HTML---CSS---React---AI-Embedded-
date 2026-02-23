@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #FAFAF8;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    box-shadow: 0 1px 3px rgb(193, 193, 193);
+    background: white;
+}
+
+#logo {
+    height: 60px;
+}
+
+#header-title {
+    margin: 0 15px 0 15px;
+    font-weight: 400;
+}
+
+.input-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 50px;
+}
+
+#input {
+    width: 400px;
+    height: 40px;
+    padding: 15px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+}
+
+#btn {
+    width: 180px;
+    height: 40px;
+    margin: 0 15px 0 15px;
+    color: #eaeaea;
+    background: rgb(29, 29, 29);
+    border: none;
+    border-radius: 5px;
+}
+
+.list-of-ingredient-field {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul, li {
+    color: rgb(96, 96, 96);
+}
+
+.get-recipe-box {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+    background: #F0EFEB;
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#get-recipe-box-text {
+    margin-right: 50px;
+}
+
+#get-recipe-box-title {
+    font-size: large;
+    margin-bottom: 0;
+}
+
+#get-recipe-box-btn {
+    width: 100px;
+    height: 40px;
+    background: #D17557;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#get-recipe-box-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.loading-recipe {
+    width: 610px;
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4d4d4d;
+}
+
+.loading-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #D17557;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.45;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.45;
+    }
+}
+
+.suggested-recipe-container {
+    width: 610px;
+    margin: 30px auto 0;
+    color: rgb(42, 42, 42);
+}
+
+.suggested-recipe-markdown p {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.suggested-recipe-markdown ul {
+    margin: 0 0 14px;
+    padding-left: 24px;
+}
