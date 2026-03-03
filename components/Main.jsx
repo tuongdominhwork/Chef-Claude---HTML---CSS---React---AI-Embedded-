@@ -39,6 +39,12 @@ export default function Main() {
             setIsLoading(false)
         }
     }
+    const recipeShow = React.useRef(null)
+    React.useEffect(() => {
+        if (recipe !== "" && recipeShow.current !== null) {
+            recipeShow.current.scrollIntoView({behavior: "smooth"})
+        }
+    }, [recipe])
     return(
         <div>
             <form action={addIngredient}>
@@ -49,7 +55,7 @@ export default function Main() {
                 {ingredient.length > 0 && <Ingredient ingredient={ingredient} />}
             </form>
             {ingredient.length > 3 && <div className="get-recipe-box">
-                <div id="get-recipe-box-text">
+                <div ref={ recipeShow } id="get-recipe-box-text">
                     <h4 id="get-recipe-box-title">Ready for a recipe?</h4>
                     <p>Generate a recipe from your list of ingredients</p>
                 </div>
